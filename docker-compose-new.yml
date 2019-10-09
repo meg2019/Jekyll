@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  myblog:
+    tty: true
+    stdin_open: true
+    image: jekyll/jekyll
+    container_name: myblog
+    volumes:
+      - .:/srv/jekyll
+    command: ["jekyll", "new", ".", "--force"]
