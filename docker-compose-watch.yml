@@ -1,12 +1,13 @@
 version: "3.7"
+
 services:
   myblog:
-    image: jekyll/jekyll:${JEKYLL_VERSION}
-    container_name: myblog
+    image: jekyll/jekyll:3.8
+    container_name: meg2019
     ports:
       - "3000:4000"
     volumes:
-      - .:/srv/jekyll
+      - ./meg2019:/srv/jekyll
     tty: true
     stdin_open: true
     command: ["jekyll", "serve", "--watch", "--drafts"]
