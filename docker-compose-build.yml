@@ -1,8 +1,9 @@
 version: "3.7"
 services:
+
   myblog:
-    image: jekyll/jekyll
-    container_name: myblog
+    image: jekyll/jekyll:3.8
+    container_name: meg2019
     volumes:
       - .:/srv/jekyll
     tty: true
