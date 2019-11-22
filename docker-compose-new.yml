@@ -1,11 +1,11 @@
 version: "3.7"
-
 services:
+
   myblog:
     tty: true
     stdin_open: true
-    image: jekyll/jekyll
-    container_name: myblog
+    image: jekyll/jekyll:3.8
+    container_name: meg2019
     volumes:
       - .:/srv/jekyll
-    command: ["jekyll", "new", ".", "--force"]
+    command: ["jekyll", "new", "meg2019", "--force"]
